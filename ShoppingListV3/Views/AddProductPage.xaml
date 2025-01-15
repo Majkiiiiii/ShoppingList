@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShoppingListV3.Views.AddProductPage">
+
+    <StackLayout Padding="10">
+        <Label Text="Add Product" FontSize="24" HorizontalOptions="Center" />
+
+        <Entry x:Name="ProductNameEntry" Placeholder="Product Name" />
+        <Entry x:Name="ProductQuantityEntry" Placeholder="Quantity" Keyboard="Numeric" />
+
+        <Picker x:Name="UnitPicker" Title="Select Unit">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>kg</x:String>
+                    <x:String>l</x:String>
+                    <x:String>psc</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Button Text="Add Product" Clicked="OnAddProductClicked" />
+    </StackLayout>
+</ContentPage>
+
